@@ -217,3 +217,15 @@ Migrating to CreateLocations (20200917223444)
   [1m[36mActiveRecord::InternalMetadata Load (54.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (6.6ms)[0m  [1m[32mINSERT INTO "locations" ("zip_code", "city", "state", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["zip_code", "94002"], ["city", "Belmont"], ["state", "California"], ["country", "USA"], ["created_at", "2020-09-17 22:45:17.600144"], ["updated_at", "2020-09-17 22:45:17.600144"]]
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLocation Destroy (12.3ms)[0m  [1m[31mDELETE FROM "locations"[0m
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "locations"[0m
+  [1m[36mLocation Load (47.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (27.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35m (30.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
