@@ -272,3 +272,82 @@ Migrating to CreateLocations (20200917223444)
   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mikelee"], ["LIMIT", 1]]
   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+Started GET "/" for ::1 at 2020-10-04 08:51:48 -0700
+  [1m[35m (32.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/shaqqour/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/shaqqour/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 55.4ms | Allocations: 483)
+Completed 200 OK in 121ms (Views: 75.5ms | ActiveRecord: 0.0ms | Allocations: 2628)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-10-04 08:51:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/locations" for ::1 at 2020-10-04 08:51:55 -0700
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms | Allocations: 10016)
+
+
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `json' for #<Location::ActiveRecord_Relation:0x00005612aacf9d98>
+Did you mean?  join):
+  
+app/controllers/locations_controller.rb:4:in `index'
+Started GET "/locations" for ::1 at 2020-10-04 08:52:24 -0700
+Processing by LocationsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Started GET "/locations" for ::1 at 2020-10-04 08:52:56 -0700
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:4:in `puts'
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 5.6ms | Allocations: 7514)
+
+
+Started GET "/locations" for ::1 at 2020-10-04 08:56:09 -0700
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 18.0ms | ActiveRecord: 5.7ms | Allocations: 8069)
+
+
+Started GET "/locations" for ::1 at 2020-10-04 08:56:44 -0700
+Processing by LocationsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 22.1ms | ActiveRecord: 8.9ms | Allocations: 12381)
+
+
+Started GET "/locations" for ::1 at 2020-10-04 08:57:12 -0700
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 18.5ms | ActiveRecord: 7.1ms | Allocations: 8068)
+
+
