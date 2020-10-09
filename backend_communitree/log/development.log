@@ -797,3 +797,10 @@ Processing by SkillsController#index as HTML
 Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
 
 
+Started GET "/skills" for ::1 at 2020-10-09 12:54:07 -0700
+Processing by SkillsController#index as HTML
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  ↳ app/controllers/skills_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 9.2ms | ActiveRecord: 8.5ms | Allocations: 4275)
+
+
