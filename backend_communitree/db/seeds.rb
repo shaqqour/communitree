@@ -10,7 +10,7 @@
     User.create(username: "jakefee", first_name: "Jake", last_name: "Fee", birth_date: Date.new(1980, 1, 1), age: Time.now.year - 1980, phone_number: "1111111111", email: "jakefee@email.com", password: "111111")
 
     Location.find_or_create_by(zip_code: "00000", city: "Man", state: "CA", country: "U.S", latitude: "0", longitude: "0")
-    Location.find_or_create_b(zip_code: "11111", city: "Fan", state: "CA", country: "U.S", latitude: "1", longitude: "1")
+    Location.find_or_create_by(zip_code: "11111", city: "Fan", state: "CA", country: "U.S", latitude: "1", longitude: "1")
 
-    Skill.find_or_create(name: "Writing")
-    Skill.find_or_create(name: "Swimming")
+    Skill.find_or_create_by(name: "Writing")
+    Skill.find_or_create_by(name: "Swimming")
