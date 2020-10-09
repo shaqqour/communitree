@@ -9,5 +9,8 @@
     User.create(username: "mikelee", first_name: "Mike", last_name: "Lee", birth_date: Date.new(1990, 1, 1), age: Time.now.year - 1990, phone_number: "0000000000", email: "mikelee@email.com", password: "000000")
     User.create(username: "jakefee", first_name: "Jake", last_name: "Fee", birth_date: Date.new(1980, 1, 1), age: Time.now.year - 1980, phone_number: "1111111111", email: "jakefee@email.com", password: "111111")
 
-    Location.create(zip_code: "00000", city: "Man", state: "CA", country: "U.S", latitude: "0", longitude: "0")
-    Location.create(zip_code: "11111", city: "Fan", state: "CA", country: "U.S", latitude: "1", longitude: "1")
+    Location.find_or_create_by(zip_code: "00000", city: "Man", state: "CA", country: "U.S", latitude: "0", longitude: "0")
+    Location.find_or_create_b(zip_code: "11111", city: "Fan", state: "CA", country: "U.S", latitude: "1", longitude: "1")
+
+    Skill.find_or_create(name: "Writing")
+    Skill.find_or_create(name: "Swimming")
