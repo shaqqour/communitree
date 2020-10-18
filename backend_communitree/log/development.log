@@ -834,3 +834,5 @@ Migrating to AddLocationIdToUsers (20201009201549)
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
   [1m[35m (551.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_communitree_development"[0m
   [1m[35m (345.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_communitree_test"[0m
+  [1m[35m (1759.2ms)[0m  [1m[35mCREATE DATABASE "backend_communitree_development" ENCODING = 'unicode'[0m
+  [1m[35m (1085.2ms)[0m  [1m[35mCREATE DATABASE "backend_communitree_test" ENCODING = 'unicode'[0m
