@@ -954,3 +954,359 @@ Migrating to CreateJoinTableUserSkill (20201022202733)
   [1m[35m (18.9ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
   [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJoinTableUserSkill (20201023001820)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (61.8ms)[0m  [1m[35mCREATE TABLE "skills_users" ("user_id" bigint NOT NULL, "skill_id" bigint NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201023001820"]]
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (80.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJoinTableUserSkill (20201023001820)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "skills_users"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201023001820"]]
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJoinTableUserSkill (20201023002538)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "skills_users" ("user_id" bigint NOT NULL, "skill_id" bigint NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201023002538"]]
+  [1m[35m (23.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJoinTableUserSkill (20201023002538)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "skills_users"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201023002538"]]
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserSkills (20201023002913)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (247.7ms)[0m  [1m[35mCREATE TABLE "user_skills" ("id" bigserial primary key, "user_id" integer, "skill_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201023002913"]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSkill Load (31.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "user_skills" ON "skills"."id" = "user_skills"."skill_id" WHERE "user_skills"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserSkills (20201023002913)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.5ms)[0m  [1m[35mDROP TABLE "user_skills"[0m
+  [1m[36mprimary::SchemaMigration Destroy (1.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201023002913"]]
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserSkills (20201023003457)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (59.0ms)[0m  [1m[35mCREATE TABLE "user_skills" ("id" bigserial primary key, "user_id" integer, "skill_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201023003457"]]
+  [1m[35m (14.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (390.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_communitree_development"[0m
+  [1m[35m (345.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_communitree_test"[0m
+  [1m[35m (1710.8ms)[0m  [1m[35mCREATE DATABASE "backend_communitree_development" ENCODING = 'unicode'[0m
+  [1m[35m (1109.9ms)[0m  [1m[35mCREATE DATABASE "backend_communitree_test" ENCODING = 'unicode'[0m
+  [1m[35m (116.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (84.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20200911215222)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "first_name" character varying, "last_name" character varying, "birth_date" date, "age" integer, "phone_number" character varying, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (32.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (26.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200911215222"]]
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLocations (20200917223444)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (86.9ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "zip_code" character varying, "city" character varying, "state" character varying, "country" character varying, "latitude" character varying, "longitude" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200917223444"]]
+  [1m[35m (11.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSkills (20201004180456)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (98.1ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201004180456"]]
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLocationIdToUsers (20201018212844)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "location_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201018212844"]]
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-23 00:42:21.625134"], ["updated_at", "2020-10-23 00:42:21.625134"]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserSkills (20201023004630)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (80.0ms)[0m  [1m[35mCREATE TABLE "user_skills" ("id" bigserial primary key, "user_id" integer, "skill_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201023004630"]]
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (2.0ms)[0m  [1m[32mINSERT INTO "locations" ("zip_code", "city", "state", "country", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["created_at", "2020-10-23 00:50:17.496159"], ["updated_at", "2020-10-23 00:50:17.496159"]]
+  [1m[35m (27.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.9ms)[0m  [1m[32mINSERT INTO "locations" ("zip_code", "city", "state", "country", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["created_at", "2020-10-23 00:50:17.545734"], ["updated_at", "2020-10-23 00:50:17.545734"]]
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSkill Load (1.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.9ms)[0m  [1m[32mINSERT INTO "skills" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Writing"], ["created_at", "2020-10-23 00:50:17.611815"], ["updated_at", "2020-10-23 00:50:17.611815"]]
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (1.0ms)[0m  [1m[32mINSERT INTO "skills" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Swimming"], ["created_at", "2020-10-23 00:50:17.653144"], ["updated_at", "2020-10-23 00:50:17.653144"]]
+  [1m[35m (24.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserSkills (20201023004630)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mDROP TABLE "user_skills"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201023004630"]]
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (1.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (381.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_communitree_development"[0m
+  [1m[35m (339.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_communitree_test"[0m
+  [1m[35m (1069.5ms)[0m  [1m[35mCREATE DATABASE "backend_communitree_development" ENCODING = 'unicode'[0m
+  [1m[35m (1015.5ms)[0m  [1m[35mCREATE DATABASE "backend_communitree_test" ENCODING = 'unicode'[0m
+  [1m[35m (87.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (103.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20200911215222)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (94.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "first_name" character varying, "last_name" character varying, "birth_date" date, "age" integer, "phone_number" character varying, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (27.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200911215222"]]
+  [1m[35m (66.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLocations (20200917223444)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (98.9ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "zip_code" character varying, "city" character varying, "state" character varying, "country" character varying, "latitude" character varying, "longitude" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200917223444"]]
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSkills (20201004180456)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.5ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201004180456"]]
+  [1m[35m (15.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLocationIdToUsers (20201018212844)
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "location_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201018212844"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-23 00:57:34.336603"], ["updated_at", "2020-10-23 00:57:34.336603"]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (12.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (1.2ms)[0m  [1m[32mINSERT INTO "locations" ("zip_code", "city", "state", "country", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["created_at", "2020-10-23 00:58:59.964141"], ["updated_at", "2020-10-23 00:58:59.964141"]]
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.6ms)[0m  [1m[32mINSERT INTO "locations" ("zip_code", "city", "state", "country", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["created_at", "2020-10-23 00:59:00.000242"], ["updated_at", "2020-10-23 00:59:00.000242"]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.8ms)[0m  [1m[32mINSERT INTO "skills" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Writing"], ["created_at", "2020-10-23 00:59:00.031498"], ["updated_at", "2020-10-23 00:59:00.031498"]]
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.6ms)[0m  [1m[32mINSERT INTO "skills" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Swimming"], ["created_at", "2020-10-23 00:59:00.050807"], ["updated_at", "2020-10-23 00:59:00.050807"]]
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marklee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "birth_date", "age", "phone_number", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["username", "mikelee"], ["first_name", "Mike"], ["last_name", "Lee"], ["birth_date", "1990-01-01"], ["age", 30], ["phone_number", "0000000000"], ["email", "mikelee@email.com"], ["encrypted_password", "$2a$12$A3J7zDYOIfmwuwuXYnf4pu8YtCjWtR5BBa2E5T40YEUiYCFB86TG2"], ["created_at", "2020-10-23 01:06:46.408167"], ["updated_at", "2020-10-23 01:06:46.408167"]]
+  [1m[35m (25.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "birth_date", "age", "phone_number", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["username", "jakefee"], ["first_name", "Jake"], ["last_name", "Fee"], ["birth_date", "1980-01-01"], ["age", 40], ["phone_number", "1111111111"], ["email", "jakefee@email.com"], ["encrypted_password", "$2a$12$XrO46FD.XxGRQHUJzXR/ruFVg44gIZGuEyxVYk1wcKjUYbdNXT7Tm"], ["created_at", "2020-10-23 01:06:46.772472"], ["updated_at", "2020-10-23 01:06:46.772472"]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserSkills (20201023011326)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (80.8ms)[0m  [1m[35mCREATE TABLE "user_skills" ("id" bigserial primary key, "user_id" integer, "skill_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201023011326"]]
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "user_skills" ON "skills"."id" = "user_skills"."skill_id" WHERE "user_skills"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY "skills"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSkill Load (1.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY "skills"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserSkill Create (2.3ms)[0m  [1m[32mINSERT INTO "user_skills" ("user_id", "skill_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["skill_id", 1], ["created_at", "2020-10-23 01:18:00.078508"], ["updated_at", "2020-10-23 01:18:00.078508"]]
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSkill Load (1.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "user_skills" ON "skills"."id" = "user_skills"."skill_id" WHERE "user_skills"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserSkill Create (1.4ms)[0m  [1m[32mINSERT INTO "user_skills" ("user_id", "skill_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["skill_id", 2], ["created_at", "2020-10-23 01:18:18.985492"], ["updated_at", "2020-10-23 01:18:18.985492"]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSkill Load (1.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "user_skills" ON "skills"."id" = "user_skills"."skill_id" WHERE "user_skills"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mSkill Load (1.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills" INNER JOIN "user_skills" ON "skills"."id" = "user_skills"."skill_id" WHERE "user_skills"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills" INNER JOIN "user_skills" ON "skills"."id" = "user_skills"."skill_id" WHERE "user_skills"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7679995781148466860)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserSkills (20201023011326)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "user_skills"[0m
+  [1m[36mprimary::SchemaMigration Destroy (1.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201023011326"]]
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
