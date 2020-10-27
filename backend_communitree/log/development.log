@@ -1559,3 +1559,311 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 29ms (Views: 22.6ms | ActiveRecord: 6.0ms | Allocations: 12376)
 
 
+Started GET "/users" for ::1 at 2020-10-27 11:59:29 -0700
+  [1m[35m (63.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (146.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 282ms (Views: 82.4ms | ActiveRecord: 198.2ms | Allocations: 13253)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-10-27 11:59:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-10-27 11:59:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (23.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 200 OK in 88ms (Views: 1.5ms | ActiveRecord: 23.6ms | Allocations: 1751)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:00:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 56)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:00:04 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:00:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:00:53 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:01:11 -0700
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-10-27 12:01:26 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 51)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:01:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 32)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:01:28 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:01:29 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:01:33 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/users" for ::1 at 2020-10-27 12:01:38 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 5.1ms | Allocations: 12410)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:01:42 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:01:46 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/users" for ::1 at 2020-10-27 12:03:38 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1391)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:03:41 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/skills" for ::1 at 2020-10-27 12:03:46 -0700
+Processing by SkillsController#index as HTML
+  [1m[36mSkill Load (15.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  ↳ app/controllers/skills_controller.rb:4:in `index'
+Completed 200 OK in 58ms (Views: 11.6ms | ActiveRecord: 22.5ms | Allocations: 5272)
+
+
+Started GET "/skills/1" for ::1 at 2020-10-27 12:03:59 -0700
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for SkillsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-10-27 12:04:06 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:04:14 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:06:44 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 204 No Content in 29ms (ActiveRecord: 6.5ms | Allocations: 11739)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:07:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 7.2ms | Allocations: 12029)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:07:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 6.9ms | Allocations: 12033)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:08:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 200 OK in 30ms (Views: 0.7ms | ActiveRecord: 6.6ms | Allocations: 12085)
+
+
+Started GET "/users/1" for ::1 at 2020-10-27 12:09:21 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 5.6ms | Allocations: 14151)
+
+
+  
+NoMethodError (undefined method `passwird' for #<User:0x0000555aa617da80>
+Did you mean?  password
+               password=):
+  
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/1" for ::1 at 2020-10-27 12:10:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 8.5ms | Allocations: 11788)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/users_controller.rb:8:in `+'
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users/1" for ::1 at 2020-10-27 12:10:17 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 200 OK in 30ms (Views: 0.5ms | ActiveRecord: 6.7ms | Allocations: 12047)
+
+
