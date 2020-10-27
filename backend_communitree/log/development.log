@@ -1867,3 +1867,33 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 30ms (Views: 0.5ms | ActiveRecord: 6.7ms | Allocations: 12047)
 
 
+Started GET "/skills" for ::1 at 2020-10-27 12:34:12 -0700
+Processing by SkillsController#index as HTML
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  ↳ app/controllers/skills_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 10.2ms | ActiveRecord: 10.5ms | Allocations: 5400)
+
+
+Started GET "/skills/1" for ::1 at 2020-10-27 12:34:17 -0700
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/skills_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 892)
+
+
+Started GET "/locations" for ::1 at 2020-10-27 12:34:25 -0700
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (77.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:4:in `index'
+Completed 200 OK in 127ms (Views: 19.4ms | ActiveRecord: 86.3ms | Allocations: 8706)
+
+
+Started GET "/locations/1" for ::1 at 2020-10-27 12:34:34 -0700
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:7:in `show'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 968)
+
+
