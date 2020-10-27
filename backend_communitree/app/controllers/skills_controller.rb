@@ -3,4 +3,8 @@ class SkillsController < ApplicationController
         skills = Skill.all
         render json: skills
     end
+    def show
+        skill = Skill.find(params[:id])
+        render json: skill
+    end
 end
