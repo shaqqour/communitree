@@ -1909,3 +1909,44 @@ Migrating to CreateCategories (20201129133113)
   [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[35m (19.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (39.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (37.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35m (23.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (17.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mobile"], ["created_at", "2020-11-29 13:52:11.773302"], ["updated_at", "2020-11-29 13:52:11.773302"]]
+  [1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (1.0ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Home"], ["created_at", "2020-11-29 13:52:11.815517"], ["updated_at", "2020-11-29 13:52:11.815517"]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Mobile"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Home"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
