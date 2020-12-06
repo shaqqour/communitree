@@ -1975,3 +1975,100 @@ FOREIGN KEY ("offered_user_id")
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7679995781148466860)[0m
   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[36mCategory Load (47.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (43.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[35m (21.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (30.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "skills"[0m
+  [1m[35m (39.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35m (69.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (44.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Mobile"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Home"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Mobile"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Home"], ["LIMIT", 1]]
+  [1m[36mService Load (0.8ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."title" = $1 AND "services"."description" = $2 LIMIT $3[0m  [["title", "Oil Change"], ["description", "Toyota Prius C"], ["LIMIT", 1]]
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."title" = $1 AND "services"."description" = $2 LIMIT $3[0m  [["title", "Prepare Resume"], ["description", "Software Engineer (Ruby on Rails)"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."title" = $1 AND "services"."description" = $2 LIMIT $3[0m  [["title", "Oil Change"], ["description", "Toyota Prius C"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[36mService Load (0.8ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."title" = $1 AND "services"."description" = $2 LIMIT $3[0m  [["title", "Oil Change"], ["description", "Toyota Prius C"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Update (388.8ms)[0m  [1m[33mUPDATE "categories" SET "name" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["name", "Career"], ["updated_at", "2020-12-06 13:49:28.128419"], ["id", 2]]
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Mobile"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Career"], ["LIMIT", 1]]
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."title" = $1 AND "services"."description" = $2 AND "services"."category_id" = $3 AND "services"."requested_user_id" = $4 AND "services"."offered_user_id" = $5 LIMIT $6[0m  [["title", "Oil Change"], ["description", "Toyota Prius C"], ["category_id", 1], ["requested_user_id", 1], ["offered_user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikelee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jakefee@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "00000"], ["city", "Man"], ["state", "CA"], ["country", "U.S"], ["latitude", "0"], ["longitude", "0"], ["LIMIT", 1]]
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."zip_code" = $1 AND "locations"."city" = $2 AND "locations"."state" = $3 AND "locations"."country" = $4 AND "locations"."latitude" = $5 AND "locations"."longitude" = $6 LIMIT $7[0m  [["zip_code", "11111"], ["city", "Fan"], ["state", "CA"], ["country", "U.S"], ["latitude", "1"], ["longitude", "1"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Writing"], ["LIMIT", 1]]
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."name" = $1 LIMIT $2[0m  [["name", "Swimming"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Mobile"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Career"], ["LIMIT", 1]]
+  [1m[36mService Load (0.7ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."title" = $1 AND "services"."description" = $2 AND "services"."category_id" = $3 AND "services"."requested_user_id" = $4 AND "services"."offered_user_id" = $5 LIMIT $6[0m  [["title", "Oil Change"], ["description", "Toyota Prius C"], ["category_id", 1], ["requested_user_id", 1], ["offered_user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
