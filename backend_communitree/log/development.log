@@ -2126,3 +2126,17 @@ FOREIGN KEY ("offered_user_id")
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (63.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (17.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (33.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (47.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (26.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (426.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_communitree_development"[0m
+  [1m[35m (221.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_communitree_test"[0m

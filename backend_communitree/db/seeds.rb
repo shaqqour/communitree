@@ -16,4 +16,4 @@
     Skill.find_or_create_by(name: "Swimming")
 
     Category.find_or_create_by(name: "Mobile")
-    Category.find_or_create_by(name: "Home")
+    Category.find_or_create_by(name: "Career")
