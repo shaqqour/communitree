@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   has_many :user_skills
   has_many :skills, through: :user_skills
-  has_many :services
+  
+  has_many :requested_user_services, class_name: 'Service', foreign_key: 'requested_user_id'
+  has_many :offered_user_services, class_name: 'Service', foreign_key: 'offered_user_id'
   
 end
