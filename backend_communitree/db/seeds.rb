@@ -17,3 +17,6 @@
 
     Category.find_or_create_by(name: "Mobile")
     Category.find_or_create_by(name: "Career")
+
+    Service.find_or_create_by(title: "Oil Change", description: "Toyota Prius C 2013", category_id: 1, requested_user_id: 1, offered_user_id: 2)
+    Service.find_or_create_by(title: "Prepare Resume", description: "Software Engineer Ruby on Rails Developer", category_id: 2, requested_user_id: 2, offered_user_id: 1)
