@@ -5,6 +5,7 @@ const CreateAccountScreen = ({ navigation }) => {
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
 
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -13,7 +14,10 @@ const CreateAccountScreen = ({ navigation }) => {
             <Text>{firstName}</Text>
             <TextInput placeholder="Last Name" onChangeText={lastName => setLastName(lastName)}/>
             <Text>{lastName}</Text>
+            <TextInput placeholder="Your email" onChangeText={email => setEmail(email)}/>
+            <Text>{email}</Text>
             
+
             <Button title="Log in" onPress={() => navigation.navigate('Login')} />
         </View>
     );
