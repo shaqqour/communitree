@@ -6,6 +6,7 @@ const CreateAccountScreen = ({ navigation }) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -16,8 +17,8 @@ const CreateAccountScreen = ({ navigation }) => {
             <Text>{lastName}</Text>
             <TextInput placeholder="Your email" onChangeText={email => setEmail(email)}/>
             <Text>{email}</Text>
-            
-
+            <TextInput placeholder="Password" onChangeText={password => setPassword(password)} secureTextEntry={true}/>
+            <Text>{password}</Text>
             <Button title="Log in" onPress={() => navigation.navigate('Login')} />
         </View>
     );
